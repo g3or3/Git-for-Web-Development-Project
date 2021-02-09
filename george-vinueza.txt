@@ -75,12 +75,25 @@ link to finished copepen: https://codepen.io/g3or3/pen/jOVMEdG?editors=1100
     36. What is the command we would use to push our repo up to github?
         git push  
     37. Walk me through Lambda's git flow. 
-        First, 
+        First, fork the repository that you are going to work on. Then clone the repo and open terminal. Use git clone "link"
+        and make sure you cd into the new repo on local machine. Use git checkout -b name_here to create a new branch. Make changes to 
+        the file you're working on and use git add . to stage the changes. Use commit -m "comment_here" to save the changes and then 
+        git push to push the changes into the remote server. The first time you push to a new branch you must use git push -u origin branch_name
+        and then you can just use git push. You can use git status to check to see if there are any differences with files and last
+        commit. On github.com there will the option to create a new pull request which you must do before merging into master branch. 
+        Make sure you select your forked repo and not main when you open a pull request. The merge must be reviewed by someone else.
 
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
-    2. What happens when an element is positioned absolutely? 
+        An inline element does not take up the whole horizontal length of the screen and a block does. ex: div is block span is inline 
+    2. What happens when an element is positioned absolutely?
+        It will allow the element to be positioned exactly where the user wants it but the element will not be affected or affect the
+        position of other elements. 
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        display: inline-block;
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        Block elements would be div, p, nav. Inline elements would be img and a. Inline-block element would be button;
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+        The box model is what every element in HTML is comprised of. It includes the content, the padding, the border and the margin. In order for elements to respect
+        the width they're given the box-sizing property in css with border-box as the value.
